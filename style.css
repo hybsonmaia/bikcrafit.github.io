@@ -1,0 +1,200 @@
+:root {
+  --color-1: #000;
+  --cor-primaria-1: #e21;
+  --cor-primaria-2: #900;
+  --background-1: #f7f7f7;
+  --background-2: #fff;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-1: #fff;
+    --cor-primaria-1: #e21;
+    --cor-primaria-2: #900;
+    --background-1: #1a1a1a;
+    --background-2: #0e0e0e;
+    --background-3: #595959;
+  }
+  #label-vantagens {
+    background-image: none !important;
+  }
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0px;
+  margin-top: 60px;
+  background-color: var(--background-1);
+  display: grid;
+  gap: 60px;
+  justify-items: center;
+  color: var(--color-1);
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0px;
+}
+
+a {
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+p {
+  font-size: 1.25rem;
+}
+
+ul {
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+}
+
+.header {
+  display: grid;
+  justify-items: center;
+  gap: 60px;
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.menu a {
+  display: block;
+  background-color: var(--background-2);
+  padding: 1rem 2rem;
+  border-radius: 4px;
+  color: var(--color-1);
+  border: 2px solid var(--background-2);
+}
+
+li a:hover {
+  border-color: var(--cor-primaria-1);
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 1000px;
+}
+
+.intro {
+  display: grid;
+  text-align: right;
+  background-color: var(--background-2);
+  padding: 2rem;
+  position: relative;
+}
+
+.intro::before {
+  content: '';
+  background-color: var(--cor-primaria-1);
+  width: 60px;
+  height: 4px;
+  position: absolute;
+  top: 30px;
+  right: -30px;
+}
+
+#label-title {
+  font-size: 2rem;
+  margin-top: 2rem;
+}
+
+.intro a {
+  background-color: var(--cor-primaria-1);
+  padding: 1rem 2rem;
+  border-radius: 4px;
+  color: var(--background-2);
+  place-self: start end;
+}
+
+.intro a:hover {
+  background-color: var(--cor-primaria-2);
+}
+
+.image {
+  max-width: 100%;
+}
+
+#label-vantagens {
+  font-size: 4rem;
+  text-align: right;
+  align-self: center;
+  text-transform: uppercase;
+  margin: 1rem;
+  color: #c6c6c6;
+  padding: 2rem;
+  background-image: url(./img/onda.svg);
+}
+
+.vantagens {
+  background-color: var(--background-2);
+}
+
+.vantagens ul {
+  margin: 40px;
+}
+
+.vantagens-items {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  padding: 20px;
+}
+
+.vantagens-items:nth-child(1)::before {
+  display: grid;
+  justify-items: center;
+  content: '';
+  width: 40px;
+  height: 40px;
+  background-image: url(./img/eletrica.svg);
+  background-repeat: no-repeat;
+}
+
+.vantagens-items:nth-child(2)::before {
+  display: grid;
+  justify-items: center;
+  content: '';
+  width: 40px;
+  height: 40px;
+  background-image: url(./img/velocidade.svg);
+  background-repeat: no-repeat;
+}
+
+.vantagens-items:nth-child(3)::before {
+  display: grid;
+  justify-items: center;
+  content: '';
+  width: 40px;
+  height: 40px;
+  background-image: url(./img/rastreador.svg);
+  background-repeat: no-repeat;
+}
+
+li p {
+  grid-column: 2;
+}
+
+.vantagens-items:nth-child(odd) {
+  background: var(--background-1);
+}
+
+.vantagens-items:hover {
+  border-left: 4px solid var(--cor-primaria-1);
+}
+
+footer {
+  background: var(--background-2);
+  width: 100%;
+  text-align: center;
+  padding: 40px;
+  font-size: 1.25rem;
+  box-sizing: border-box;
+}
